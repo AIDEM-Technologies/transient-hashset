@@ -44,6 +44,7 @@ impl<T: Eq + Hash, S: Eq + Hash> Perfect<T, S>{
     }
 }
 
+#[derive(Clone, Debug)]
 pub struct Naive<T: Eq + Hash + Clone, S: Eq + Hash + Clone>{
     bad_boy: Arc<Mutex<HashMap<(T, S), Instant>>>,
     ttl: Duration,
